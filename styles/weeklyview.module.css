@@ -1,0 +1,16 @@
+.taskRow {
+  background-color: var(--peachy);
+}
+.activityRow {
+  background-color: var(--createBackground);
+}
+.deadlineRow {
+  background-color: var(--peachy);
+}
+.dateRow {
+  background-color: var(--createBackground);
+}
+.headerRow {
+  background-color: var(--buttonColor);
+  color: white;
+}

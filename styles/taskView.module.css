@@ -1,0 +1,121 @@
+
+.wholePage {
+    height: 100vh;
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskContainer {
+    position: relative;
+    height: 80%;
+    width: 70%;
+    /* border: 5px solid var(--taskViewContainer); */
+    border-radius: 5px;
+    background-color: var(--createBackground);
+}
+
+.titleDiv {
+    height: 15%;
+    width: 100%;
+    background-color: var(--taskColumnTitleBoxColor);
+    color:white;
+    position: relative;
+}
+
+.titleDiv h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonsContainer {
+    height: 8vh;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    /* border: 1px solid red; */
+    background-color: var(--peachy);
+}
+
+.buttonRight {
+    display: inline;
+    float: right;
+}
+
+.buttonLeft, .buttonRight {
+    height: 70%;
+    width: 100px;
+    margin: 10px;
+}
+
+.editButton {
+    background: blue;
+}
+
+.deleteButton {
+    background: #dc3545;
+}
+
+.tagsContainer {
+    border: 1px solid blue;
+    height: 6vh;
+    position: absolute;
+    bottom: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tag {
+    margin: 10px;
+    min-width: 100px;
+    background: #ADD8E6;
+}
+
+.descriptionAndDateContainer {
+    height: 10vh;
+    position: relative;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--peachy);
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.dateAndHourContainer {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    width: 33%;
+    height: 100%;
+    /* border: 1px solid #D9F8C4; */
+    /* box-sizing: border-box; */
+}
+
+.dateContainer {
+    height: 50%;
+    /* border: 1px solid green; */
+}
+
+.hourContainer {
+    height: 50%;
+}
+
+.descriptionContainer p {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}

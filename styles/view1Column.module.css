@@ -1,0 +1,56 @@
+
+.wholePage {
+  height: 100vh;
+  /* border:1px solid red; */
+  background-color: var(--backgroundColor);
+}
+
+.titleDiv {
+  height: 12.5vh;
+  /* border: 1px solid green; */
+  text-align: center;
+  position: relative
+}
+.titleDiv h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table_container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 6 6 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 100px;
+    background-color: var(--createBackground);
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .table td{
+    text-align: center;
+    vertical-align: middle; 
+  }
+  
+  .tabl_row:nth-child(even) {
+    background-color: #FFEE75;
+  }
+  
+  .table_row:nth-child(odd) {
+    background-color: var(--rowColor1);
+  }
+  
+  .table_cell {
+    padding: 8px;
+    /* border: 1px solid #ddd; */
+  }

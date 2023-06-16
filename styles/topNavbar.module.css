@@ -1,0 +1,30 @@
+
+.topNavbar {
+    position: relative;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 100;
+    margin-top: 0;
+    background-color: var(--);
+}
+
+.topNavFloatRight {
+    display: inline;
+    padding: 10px;
+    float: right;
+}
+
+.topNavbarButton {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.topNavLogOut {
+    position: fixed;
+    right: 5px;
+}
+
+.topNavbarButton:hover {
+    color: black;
+}

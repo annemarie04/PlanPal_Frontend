@@ -1,0 +1,20 @@
+
+:root {
+    --backgroundColor: #FFFFFF;
+    --textColor: black;
+    --buttonColor: #F37878;
+    --buttonHoverColor: #FF6347;
+    --topNavbarColor: #C08552;
+    --leftNavbarColor: #D9F8C4;
+    --taskColumnTitleBoxColor:#F37878 ;
+    --taskViewContainer: #333333;
+    --tagColor: #17a2b8;
+    --submitTaskButtonColor: #32CD32;
+    --submitTaskButtonColorHover: #228B22;
+    --createTaskContainerColor:#D9F8C4;
+    --backgroundColor: #F9F9C5;
+    --peachy: #FAD9A1;
+    --createBackground: #D9F8C4;
+    --createBorder: #228B22;
+    --rowColor1: #81cc81;
+}

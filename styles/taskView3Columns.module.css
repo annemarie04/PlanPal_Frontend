@@ -1,0 +1,86 @@
+
+.wholePage {
+    height: 100vh;
+    /* border:1px solid red; */
+    background-color: var(--backgroundColor);
+}
+
+.titleDiv {
+    height: 12.5vh;
+    /* border: 1px solid green; */
+    text-align: center;
+    position: relative
+}
+
+.titleDiv h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.column {
+    display: flex;
+    width: 25%;
+    margin: auto;
+}
+
+.columnsContainerDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    margin-top: 8vh;
+    grid-gap: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.columnDiv {
+    /* border: 2px solid black; */
+    background-color: var(--createTaskContainerColor);
+}
+
+.columnTitle {
+    height: 10%;
+    /* border: 1px solid green; */
+    text-align: center;
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    background: var(--taskColumnTitleBoxColor);
+}
+
+.columnTitle h2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.taskTitleDiv {
+    margin-top: 10px;
+    height: 50px;
+    /* border: 1px solid red; */
+    text-align: center;
+    position: relative;
+    background: var(--peachy);
+    border-radius: 5px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.taskTitleDiv:hover {
+    background: #F9F9C5;
+}
+
+.taskTitleLink {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
