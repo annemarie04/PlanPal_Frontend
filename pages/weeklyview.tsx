@@ -172,7 +172,7 @@ function WeeklyViewPage() {
                     {
                       taskToday.map((task, index) => {
                         return (
-                          <Link href={`/tasks/view/${task._id}`}>
+                          <Link href={`/tasks/view/${task._id}`} key={index}>
                             <div key={index}>
                               <div className={styles.taskContainer}>
                                 <div className={styles.taskName}>{task.title}</div>
@@ -199,7 +199,7 @@ function WeeklyViewPage() {
                     {
                       taskToday.map((task, index) => {
                         return (
-                          <Link href={`/activities/view/${task._id}`}>
+                          <Link href={`/activities/view/${task._id}`} key={index}>
                             <div key={index}>
                               <div className={styles.taskContainer}>
                                 <div className={styles.taskName}>{task.title}</div>
@@ -226,7 +226,7 @@ function WeeklyViewPage() {
                     {
                       taskToday.map((task, index) => {
                         return (
-                          <Link href={`deadlines/view/${task._id}`}>
+                          <Link href={`deadlines/view/${task._id}`} key={index}>
                             <div key={index}>
                               <div className={styles.taskContainer}>
                                 <div className={styles.taskName}>{task.title}</div>
