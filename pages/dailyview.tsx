@@ -9,7 +9,7 @@ import Link from "next/link";
 function DailyViewPage() {
   const [taskList, setTaskList] = useState<Task[] | null>(null);
   const [activityList, setActivityList] = useState<Activity[] | null>(null);
-  const [finalList, setFinalList] = useState<(Activity | Task)[]>([]);
+  const [finalList, setFinalList] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [isInitialLoadComplete, setIsInitialLoadComplete] = useState(false);
   // const initialDay = toDDMMYYYY(new Date());
@@ -104,7 +104,7 @@ function DailyViewPage() {
       console.log("TASK LIST:", taskList);
       console.log("ACTIVITY LIST:", activityList);
       // concatenate taskList with activityList
-      let finalList: (Task | Activity)[] = [];
+      let finalList: any[] = [];
       if (taskList) finalList = [...taskList];
       if (activityList) finalList = [...finalList, ...activityList];
       // const finalList = [...taskList, ...activityList];
