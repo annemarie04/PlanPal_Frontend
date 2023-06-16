@@ -143,7 +143,6 @@ function DailyViewPage() {
           <div className={styles.activitiesContainer}>
             {finalList.map((activity: any) => (
               <>
-                // @ts-ignore
                 {activity.status === "done" ? null : (
                   <Link
                     href={
