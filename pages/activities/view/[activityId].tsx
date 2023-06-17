@@ -4,6 +4,7 @@ import styles from "../../../styles/taskView.module.css";
 import Link from "next/link";
 import { deleteTask } from "@/pages/api/deleteTask";
 import { Activity } from "@/utils/interfaces";
+import { deleteActivity } from "@/pages/api/deleteActivity";
 
 interface Task {
   _id: string;
@@ -74,7 +75,7 @@ function ViewActivityPage() {
 
   const deleteT = () => {
     if (typeof activityId === "string")
-      deleteTask(activityId);
+      deleteActivity(activityId);
     router.push("/activities");
   }
 
@@ -91,7 +92,7 @@ function ViewActivityPage() {
             <button type="button" className={`btn btn-danger ${styles.buttonLeft} ${styles.deleteButton}`} onClick={deleteT}>
               Delete
             </button>
-            <Link href={`/tasks/edit/${activity._id}`}>
+            <Link href={`/activities/edit/${activity._id}`}>
               <button type="button" className={`btn btn-primary ${styles.buttonRight} ${styles.editButton}`}>
                 Edit
               </button>
@@ -104,22 +105,14 @@ function ViewActivityPage() {
                         </button>
                     ))}
                 </div> */}
-          <div className={styles.descriptionAndDateContainer}>
+          <div className={styles.descriptionAndDateContainerActivity}>
             <div className={styles.description}>
               Description:
             </div>
             <div className={styles.dateAndHourContainer}>
-              Starting from:
-              <div className={styles.dateContainer}>
-                Date: {toDDMMYYYY(activity.start_date)}
-              </div>
-              <div className={styles.hourContainer}>
-                Hour: {getFormattedTime(activity.start_date)}
-              </div>
-              To 
-              <div className={styles.dateContainer}>
-                Hour: {getFormattedTime(activity.end_date)}
-              </div>
+              Date: {toDDMMYYYY(activity.start_date)}
+              <br/>
+              From {getFormattedTime(activity.start_date)} to {getFormattedTime(activity.end_date)}
               {activity.repeat && (
                 <div> every {activity.repeat} days </div>
               )}

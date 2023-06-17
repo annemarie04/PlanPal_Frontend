@@ -10,7 +10,6 @@ import { editActivity } from "@/pages/api/editActivity";
 function EditActivityPage() {
     const router = useRouter();
     const { activityId } = router.query;
-    const [activity, setActivity] = useState <Activity | null> (null); 
 
     const fetchActivityData = async() => {
         if (activityId) {
@@ -30,9 +29,11 @@ function EditActivityPage() {
                 const startTimeString = startDate.toISOString().split('T')[1].split('.')[0];
                 const endDate = new Date(data.end_date);
                 const endTimeString = endDate.toISOString().split('T')[1].split('.')[0];
-                const endRepeatDate = new Date(data.repeat_end_date);
-                const endRepeatDateString = endRepeatDate.toISOString().split('T')[0];
-                
+                let endRepeatDateString = "";
+                if(data.repeat_end_date) {
+                    const endRepeatDate = new Date(data.repeat_end_date);
+                    endRepeatDateString = endRepeatDate? endRepeatDate.toISOString().split('T')[0] : "";
+                }
                 setActivityDate(startDateString);
                 setStartTime(startTimeString);
                 setEndTime(endTimeString);
@@ -99,7 +100,7 @@ function EditActivityPage() {
     }
     if (typeof activityId == "string") {
         editActivity(activityId, activity);
-        //router.push('/activity');
+        router.push('/activities');
     }
     /*
     console.log("Fields:");
