@@ -141,7 +141,7 @@ function WeeklyViewPage() {
     <div className={styles.wholePage}>
       <br />
       <div className={styles.pageContainer}>
-        <table className="table table-responsive">
+        <table className={`table table-responsive ${styless.mainTable}`}>
           <thead>
           <tr className={styless.headerRow}>
               <th scope="col">Type</th>
