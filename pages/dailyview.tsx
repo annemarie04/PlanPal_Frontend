@@ -13,7 +13,7 @@ function DailyViewPage() {
   const [loading, setLoading] = useState(true);
   const [isInitialLoadComplete, setIsInitialLoadComplete] = useState(false);
   // const initialDay = toDDMMYYYY(new Date());
-  const initialDay = new Date();
+  const [initialDay, setInitialDay] = useState(new Date());
 
   const getByDay = (day: string) => {
     if (taskList == null || activityList == null) return [];
@@ -35,6 +35,10 @@ function DailyViewPage() {
       }
     );
   };
+
+  const handleInitialDayChange = (event: any) => {
+    setInitialDay(new Date(event.target.value));
+  }
 
   useEffect(() => {
     const userId = localStorage.getItem("userId");
@@ -97,7 +101,7 @@ function DailyViewPage() {
     };
 
     fetchData();
-  }, []);
+  }, [initialDay]);
 
   useEffect(() => {
     if (isInitialLoadComplete) {
@@ -126,7 +130,9 @@ function DailyViewPage() {
           {" "}
           <h1> Daily view </h1>{" "}
         </div>
-        <div className={styles.daySelectBar}>Bara de selectare a zilei</div>
+        <div className={styles.daySelectBar}>
+            <input type="date" value = '06-06-2023' className="form-control" id = "dateField" placeholder = "Date" onChange={handleInitialDayChange} />
+        </div>
         <div className={styles.timelineContainer}>
           <div className={styles.leftBarContainer}>
             {finalList.map((activity) => (
