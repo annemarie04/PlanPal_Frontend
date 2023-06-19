@@ -50,10 +50,13 @@ function TaskView3Columns({ taskListData }: TaskView3ColumnsProps) {
             <div className={styles.titleDiv}>
                 <h1> Your tasks </h1>
             </div>
-            <div className="row align-items-center">
+            <div className={`row align-items-center ${styles.filterByDateContainer}`}>
                 <div className="col-auto" style={{width: "30%"}}>
                     <label  htmlFor="dateField">Filter by Date</label>
                     <input type="date" className="form-control mb-2" id="dateField" placeholder="Date" value={date} onChange={handleDateChange} />
+                </div>
+                <div className="col-auto" style={{width: "30%"}}>
+                    or
                 </div>
                 <div className="col-auto">
                     <div className="form-check mb-2">

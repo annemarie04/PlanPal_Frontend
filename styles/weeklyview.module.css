@@ -14,3 +14,7 @@
   background-color: var(--buttonColor);
   color: white;
 }
+
+.mainTable {
+  margin-top: 20vh;
+}
