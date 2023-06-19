@@ -5,9 +5,11 @@ import { fromStringsToDate } from "@/utils/dateConvertion";
 import { CreateActivityDto, CreateTaskDTO } from "@/utils/interfaces";
 import { createTask } from "./api/createTask";
 import { createActivity } from "./api/createActivity";
+import { useRouter } from "next/router";
 
 function CreateActivityPage() {
-
+  
+  const router = useRouter();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [activityDate, setActivityDate] = useState('');
@@ -56,6 +58,7 @@ function CreateActivityPage() {
     }
     console.log(activity);
     createActivity(activity);
+    router.push("/activities");
   };
 
   return (
